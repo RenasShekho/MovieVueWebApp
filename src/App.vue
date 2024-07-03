@@ -18,6 +18,5 @@ export default{
       </nav>
     </header>
   </div>
-  <RouterView class="AppRouterView"/>
-
+<RouterView class="AppRouterView"/>
 </template>
