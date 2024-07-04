@@ -7,7 +7,6 @@ export default{
 
 </script>
 
-<!-- <genre-nav-component @ShowGenreNav="ShowGenreNavi"></genre-nav-component> -->
 <template>
   <genre-nav-view></genre-nav-view>
   <div class="AppcContainer">

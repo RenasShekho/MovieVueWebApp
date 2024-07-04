@@ -3,7 +3,8 @@
     <div class="GenreNav" >
       <nav>
         <RouterLink to="/ActionCom">Action | (20)</RouterLink>
-        <RouterLink to="/ActionCom">Comedy</RouterLink>
+        <RouterLink to="/MovieCom">All series </RouterLink>
+        <RouterLink to="/MovieCom">Comedy</RouterLink>
         <RouterLink to="/ActionCom">Thriller</RouterLink>
         <RouterLink to="/ActionCom">War</RouterLink>
         <RouterLink to="/ActionCom">Romance</RouterLink>

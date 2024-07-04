@@ -25,7 +25,7 @@ const router = createRouter({
       component: ActionComponent
     },
     {
-      path: '/MovieCom/:id', //Movie component
+      path: '/MovieCom', //Movie component
       name: 'movieComponent',
       component: MovieComponent,
       props:true,// To make route parameters available as props

@@ -105,17 +105,17 @@ color: black;
 
 }
 
-.MoviesContainer :hover {
+.movieCard  :hover {
   height: 200px;
   width: 215px;
   background: rgb(156, 50, 50);
   transition: 0.8s;
   border-radius: 20px;
+  flex-wrap: wrap;
 
 }
 .movieCard  {
   height: 250px;
-  color: rgb(21, 243, 13);
   transition: 0.2ms;
   width: 500px;
   margin: 10px;
@@ -211,3 +211,15 @@ background-color: rgba(129, 148, 255, 0.575);
         text-align: left;
         }
 
+        .addToWishlist{
+          background-color: antiquewhite;
+          margin-left: 50px;
+          margin-top: 50px;
+          border-radius: 20px;
+        }   
+        .removeButton {
+          padding: 5px 10px;
+          background-color: #ddd;
+          border: 1px solid #ccc;
+          cursor: pointer;
+        }
