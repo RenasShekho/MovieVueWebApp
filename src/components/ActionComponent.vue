@@ -7,6 +7,7 @@
           Add to Wishlist
         </button>
         <router-link
+          class="RouterLinkMovie"
           :to="{
             path: '/movieDetailsCom',
             query: { title: movie.title, description: movie.description },
@@ -34,15 +35,21 @@ export default {
   },
   methods: {
     addToWishlist(movie) {
-      const currentWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-      const alreadyInWishlist = currentWishlist.some(item => item.title === movie.title);
-
-      if (!alreadyInWishlist) {
-        currentWishlist.push(movie);
-        localStorage.setItem('wishlist', JSON.stringify(currentWishlist));
-      } else {
-        //Display a message indicating the movie is already in the wishlist
-        console.warn('Movie already exists in wishlist');
+      const currentWishlist =
+        JSON.parse(localStorage.getItem("wishlist")) || [];
+      const alreadyInWishlist = currentWishlist.some(
+        (item) => item.title === movie.title
+      );
+      try {
+        if (!alreadyInWishlist) {
+          currentWishlist.push(movie);
+          localStorage.setItem("wishlist", JSON.stringify(currentWishlist));
+        } else {
+          //Display a message indicating the movie is already in the wishlist
+          console.warn("Movie already exists in wishlist");
+        }
+      } catch {
+        localStorage.removeItem;
       }
     },
     async fetchMovies() {

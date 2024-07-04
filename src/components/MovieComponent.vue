@@ -3,7 +3,16 @@
     <h1>All series</h1>
     <div class="MoviesContainer">
       <div class="movieCard" v-for="movie in movies" :key="movie.title">
-        <router-link :to="{ path: '/movieDetailsCom', query:{ title: movie.title, description:movie.description} }">        <!-- <router-link :to="`/MovieDetailsCom/${movie.title}${movie.description}`" > -->
+        <button class="addToWishlist" @click="addToWishlist(movie)">
+          Add to Wishlist
+        </button>
+        <router-link
+          class="RouterLinkMovie"
+          :to="{
+            path: '/movieDetailsCom',
+            query: { title: movie.title, description: movie.description },
+          }"
+        >
           <img class="MovieCardImg" :src="imageUrl" />
           <span class="title">{{ movie.title }}</span>
         </router-link>
@@ -25,6 +34,24 @@ export default {
     this.fetchMovies();
   },
   methods: {
+    addToWishlist(movie) {
+      const currentWishlist =
+        JSON.parse(localStorage.getItem("wishlist")) || [];
+      const alreadyInWishlist = currentWishlist.some(
+        (item) => item.title === movie.title
+      );
+      try {
+        if (!alreadyInWishlist) {
+          currentWishlist.push(movie);
+          localStorage.setItem("wishlist", JSON.stringify(currentWishlist));
+        } else {
+          //Display a message indicating the movie is already in the wishlist
+          console.warn("Movie already exists in wishlist");
+        }
+      } catch {
+        localStorage.removeItem;
+      }
+    },
     async fetchMovies() {
       try {
         const response = await axios.get(
@@ -34,8 +61,7 @@ export default {
         this.movies = data.entries.map((entry) => ({
           title: entry.title,
           description: entry.description,
-        }));  
-       
+        }));
       } catch (error) {
         console.error("Error fetching movies:", error);
       }

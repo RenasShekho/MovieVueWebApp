@@ -1,8 +1,8 @@
 <template>
   <div v-if="wishlist.length">
     <h1>Wishlist</h1>
-    <div >
-      <div  v-for="movie in wishlist" :key="movie.id">
+    <div>
+      <div v-for="movie in wishlist" :key="movie.id">
         <router-link
           :to="{
             path: '/movieDetailsCom',
@@ -12,7 +12,9 @@
           <img class="MovieCardImg" :src="imageUrl" />
           <span class="title">{{ movie.title }}</span>
         </router-link>
-        <button class="removeButton" @click="removeFromWishlist(movie)">Remove</button>
+        <button class="removeButton" @click="removeFromWishlist(movie)">
+          Remove
+        </button>
       </div>
     </div>
   </div>

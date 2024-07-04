@@ -1,10 +1,9 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router'
-import GenreNavView from './views/GenreNavView.vue'
-export default{
-  components:{GenreNavView},
-}
-
+import { RouterLink, RouterView } from "vue-router";
+import GenreNavView from "./views/GenreNavView.vue";
+export default {
+  components: { GenreNavView },
+};
 </script>
 
 <template>
@@ -13,9 +12,9 @@ export default{
     <header class="AppHeader">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <router-link to="/WishListCom" >Wish List</router-link>
+        <router-link to="/WishListCom">Wish List</router-link>
       </nav>
     </header>
   </div>
-<RouterView class="AppRouterView"/>
+  <RouterView class="AppRouterView" />
 </template>

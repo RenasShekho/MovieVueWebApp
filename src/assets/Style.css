@@ -5,6 +5,7 @@
 /* -----Home component style----- */
 .HomeBody {
   margin: 40px;
+  width: 900px;
 }
 
 /* -----App.Vue----- */
@@ -105,9 +106,9 @@ color: black;
 
 }
 
-.movieCard  :hover {
-  height: 200px;
-  width: 215px;
+.RouterLinkMovie :hover {
+  height: 250px;
+  width: 235px;
   background: rgb(156, 50, 50);
   transition: 0.8s;
   border-radius: 20px;
@@ -115,7 +116,7 @@ color: black;
 
 }
 .movieCard  {
-  height: 250px;
+  height: 400px;
   transition: 0.2ms;
   width: 500px;
   margin: 10px;
@@ -124,8 +125,8 @@ color: black;
 .MovieCardImg {
   width: 210px;
   height: 200px;
-  background-color: #ffd90050;
   border-radius: 10px;
+  margin-top: 20px;
 
 }
 .title{

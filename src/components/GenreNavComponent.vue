@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="GenreNav" >
+    <div class="GenreNav">
       <nav>
         <RouterLink to="/ActionCom">Action | (20)</RouterLink>
         <RouterLink to="/MovieCom">All series </RouterLink>
@@ -18,6 +18,5 @@
 </template>
 <script>
 import { RouterLink, RouterView } from "vue-router";
-export default{
-}
+export default {};
 </script>
