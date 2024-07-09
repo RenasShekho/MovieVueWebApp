@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <genre-nav-view></genre-nav-view>
+  <genre-nav-view ></genre-nav-view>
   <div class="AppcContainer">
     <header class="AppHeader">
       <nav>

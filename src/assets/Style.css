@@ -1,15 +1,14 @@
 /* -----Home View----- */
-.HomeViewContainer{
+.HomeViewContainer {
   display: flex;
 }
 /* -----Home component style----- */
 .HomeBody {
-  margin: 40px;
-  width: 900px;
+  width: 1200px;
 }
 
 /* -----App.Vue----- */
-.appCntainer{
+.appCntainer {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -21,7 +20,7 @@
   height: 25px;
   align-items: center;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 .AppHeader nav a {
   text-decoration: none;
@@ -48,51 +47,25 @@
   border: 0;
 }
 
-@media (min-width: 1024px) {
 
-  .AppHeader header {
-    display: block;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .AppHeader header .wrapper {
-    display: block;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .AppHeader nav {
-    text-align: center;
-    margin-left: -1rem;
-    font-size: 1rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }    
-}
-@media(max-width :740px){
-.GenreNav{
-margin-top: 850px;
-}
-}
 
 /* ------App RouterView -----*/
-.AppRouterView{
+.AppRouterView {
   margin-left: 200px;
 }
 
-.genre{
+.genre {
   display: flex;
   margin-top: 20px;
 }
-.genre p{
+.genre p {
   font-size: 18px;
-margin: 2px;
+  margin: 2px;
 }
 .GenreTitle {
   font-size: 20px;
-margin: 2px;
-color: black;
+  margin: 2px;
+  color: black;
 }
 /* -----Action Component----- */
 .MoviesContainer {
@@ -103,7 +76,6 @@ color: black;
   overflow: auto;
   border-radius: 10px;
   align-items: center;
-
 }
 
 .RouterLinkMovie :hover {
@@ -113,9 +85,8 @@ color: black;
   transition: 0.8s;
   border-radius: 20px;
   flex-wrap: wrap;
-
 }
-.movieCard  {
+.movieCard {
   height: 400px;
   transition: 0.2ms;
   width: 500px;
@@ -127,9 +98,9 @@ color: black;
   height: 200px;
   border-radius: 10px;
   margin-top: 20px;
-
 }
-.title{
+
+.title {
   font-size: 14px;
   color: rgb(255, 255, 255);
   max-height: 40px;
@@ -151,14 +122,13 @@ color: black;
   width: 190px;
   height: 100%;
   color: red;
-margin-top: 60px;
+  margin-top: 60px;
   position: fixed;
   overflow: auto;
   display: n;
   border-radius: 0 40px 0px 40px;
   transition: 0.5s;
   left: 0px;
- 
 }
 .GenreNav nav {
   margin-top: 10px;
@@ -171,56 +141,148 @@ margin-top: 60px;
   font-size: 14px;
 }
 
-.GenreNav a:hover {
-  font-size: 25px;
-  color: red;
-  transition: 0.5s;
-  background-color: transparent;
-}
-/* Movie details */
-.movieDetailsContainer button{
-justify-items: left;
-background-color: rgba(129, 148, 255, 0.575);
-}
-.movieDetailsContainer button img{
-  height: 350px;
-  width: 500px;
-  border-radius: 20px;
-}
-.movieDetailsContainer button h1{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-}
-.h1Title{
-  color:white;
-}
-.detailsBtnContainer{
-  display: block;
+  .GenreNav a:hover {
+    font-size: 25px;
+    color: red;
+    transition: 0.5s;
+    background-color: transparent;
   }
-  .detailsBtnContainer div{
+  /* Movie details */
+  .movieDetailsContainer button {
+    justify-items: left;
+    background-color: rgba(129, 148, 255, 0.575);
+  }
+  .movieDetailsContainer button img {
+    height: 350px;
+    width: 500px;
+    border-radius: 20px;
+  }
+  .movieDetailsContainer button h1 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .h1Title {
+    color: white;
+  }
+  .detailsBtnContainer {
+    display: block;
+  }
+  .detailsBtnContainer div {
     display: flex;
     margin-top: 20px;
+  }
+  .detailsBtnContainer div h1 {
+    margin-left: 50px;
+    text-align: left;
+  }
+  .detailsBtnContainer div h2 {
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+  }
+
+  .addToWishlist {
+    background-color: rgb(253, 181, 86);
+    width: 130px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 20px;
+    height: 30px;
+  }
+
+  .removeButton {
+    background-color: antiquewhite;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 30px;
+  }
+  @media (min-width: 1024px) {
+    .AppHeader header {
+      display: block;
+      place-items: center;
+      padding-right: calc(var(--section-gap) / 2);
+    }
+  
+    .AppHeader header .wrapper {
+      display: block;
+      place-items: flex-start;
+      flex-wrap: wrap;
+    }
+  
+    .AppHeader nav {
+      text-align: center;
+      margin-left: -1rem;
+      font-size: 1rem;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+   
+  }
+  @media (max-width: 740px) {
+    .GenreNav {
+      width: 70px;
+      margin-top: 25px
+    }
+    .GenreNav nav {
+      font-size: 10px;
+      left: -8px;
     } 
-    .detailsBtnContainer div h1{
-      margin-left: 50px;    
-      text-align: left;
-
-
-    }  
-       .detailsBtnContainer div h2{
-        margin-left: 20px;      
-        color: white;
-        text-align: left;
-        }
-
-        .addToWishlist{
-          background-color: antiquewhite;
-          margin-left: 50px;
-          margin-top: 50px;
-          border-radius: 20px;
-        }   
-        .removeButton {
-          padding: 5px 10px;
-          background-color: #ddd;
-          border: 1px solid #ccc;
-          cursor: pointer;
-        }
+    .GenreNav a:hover {
+      font-size: 12px;
+      color: red;
+      transition: 0.5s;
+      background-color: transparent;
+    }
+    .HomeBody{
+      margin: 0;
+    }
+    .AppRouterView {
+      margin-left: 70px;
+    }
+    .MoviesContainer {
+      margin-top: 10px;
+      background: rgba(250, 193, 193, 0.308);
+      display: flex;
+      height: 300px;
+      overflow: auto;
+      border-radius: 10px;
+      align-items: center;
+    }
+    .RouterLinkMovie :hover {
+      height: 180px;
+      width: 195px;
+      transition: 0.8s;
+      border-radius: 20px;
+      flex-wrap: wrap;
+    }
+    .movieCard {
+      height: 360px;
+      transition: 0.2ms;
+      width: 200px;
+      margin: 10px;
+    }
+  
+    .MovieCardImg {
+      width: 140px;
+      height: 160px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  
+    .title {
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      max-height: 40px;
+    }
+    .MoviesContainer h1 {
+      color: azure;
+      font-size: 40px;
+      text-align: center;
+    }
+    .addToWishlist {
+      background-color: rgb(253, 181, 86);
+      width: 130px;
+      margin-left: 8px;
+    }
+  }
+  

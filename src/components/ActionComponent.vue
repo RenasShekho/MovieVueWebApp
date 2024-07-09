@@ -10,7 +10,7 @@
           class="RouterLinkMovie"
           :to="{
             path: '/movieDetailsCom',
-            query: { title: movie.title, description: movie.description },
+            query: { title: movie.title, description: movie.description, trailerPaths: movie.tdc$youtubeTrailer},
           }"
         >
           <img class="MovieCardImg" :src="imageUrl" />
@@ -58,11 +58,19 @@ export default {
           "https://feed.entertainment.tv.theplatform.eu/f/jGxigC/bb-all-pas?form=json&range=1-20&byTags=genre:action&byYear=2017&byProgramType=movie"
         );
         const data = response.data;
+        console.log(data)
         this.movies = data.entries.map((entry) => ({
           title: entry.title,
           description: entry.description,
-        }));
-      } catch (error) {
+          trailerPath : entry.tdc$youtubeTrailer,
+          credits: entry.plprogram$credits.some((programCredits) => {
+            creditType: programCredits.plprogram$credits
+            personName: programCredits.pplprogram$personName
+              return true
+            })
+          }));
+          console.log(this.movies[0].trailerPath)
+        } catch (error) {
         console.error("Error fetching movies:", error);
       }
     },

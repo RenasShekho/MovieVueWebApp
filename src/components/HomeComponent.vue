@@ -1,6 +1,5 @@
 <template>
   <div class="HomeBody">
-    <h1>Home Page</h1>
     <movie-component></movie-component>
     <action-component></action-component>
   </div>

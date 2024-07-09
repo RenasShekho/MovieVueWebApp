@@ -2,7 +2,7 @@
   <div class="HomeBody">
     <h1>Details</h1>
     <div class="movieDetailsContainer">
-      <button>
+      <button @click="redirectToTrailer">
         <img :src="imageUrl" />
         <div class="detailsBtnContainer">
           <div>
@@ -26,6 +26,13 @@ export default {
       imageUrl: "/src/assets/Images/maxresdefault.jpg",
     };
   },
+  methods:{
+    redirectToTrailer(){
+      const trailerUrl = `https://www.youtube.com/watch?v=${this.$route.query.trailerPath}`; // Use trailer ID
+      window.open(trailerUrl, '_blank'); // Open in a new tab
+      console.log(this.$route.query)
+    }
+  }
 };
 </script>
   
